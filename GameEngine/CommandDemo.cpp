@@ -16,10 +16,10 @@ CommandDemo::~CommandDemo()
 void CommandDemo::HandleInput(std::string _button)
 {
 	CommandMoveUnit* moveCommand = nullptr;
-	if (_button == "W") moveCommand = new CommandMoveUnit(m_unit, m_unit->GetX(), m_unit->GetY() + 1);
-	else if (_button == "A") moveCommand = new CommandMoveUnit(m_unit, m_unit->GetX() -1, m_unit->GetY());
-	else if (_button == "S") moveCommand = new CommandMoveUnit(m_unit, m_unit->GetX(), m_unit->GetY() - 1);
-	else if (_button == "D") moveCommand = new CommandMoveUnit(m_unit, m_unit->GetX() + 1, m_unit->GetY());
+	if (_button == "W") moveCommand = new CommandMoveUnit(m_unit, m_unit->getX(), m_unit->getY() + 1);
+	else if (_button == "A") moveCommand = new CommandMoveUnit(m_unit, m_unit->getX() -1, m_unit->getY());
+	else if (_button == "S") moveCommand = new CommandMoveUnit(m_unit, m_unit->getX(), m_unit->getY() - 1);
+	else if (_button == "D") moveCommand = new CommandMoveUnit(m_unit, m_unit->getX() + 1, m_unit->getY());
 
 	if (moveCommand != nullptr)
 	{

@@ -16,8 +16,8 @@ public:
 
 	virtual void Execute()
 	{
-		m_xBefore = m_unit->GetX();
-		m_yBefore = m_unit->GetY();
+		m_xBefore = m_unit->getX();
+		m_yBefore = m_unit->getY();
 		m_unit->MoveTo(m_x, m_y);
 	}
 
