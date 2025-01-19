@@ -4,6 +4,6 @@
 int main()
 {
 	ThreadTest* ttest = new ThreadTest();
-	ttest->TestInstanceFunctionPointer();
+	ttest->TestFunctionObject();
 	delete ttest;
 }

@@ -2,8 +2,8 @@
 #include <iostream>
 #include <chrono>
 
-void ThreadTest::TestInstanceFunctionPointer() {
-	m_thread = std::thread(&ThreadTest::InstanceThreadFunction, ThreadTest());
+void ThreadTest::TestFunctionObject() {
+	m_thread = std::thread(ThreadTest());
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "Display From MainThread" << std::endl;
@@ -12,11 +12,11 @@ void ThreadTest::TestInstanceFunctionPointer() {
 	m_thread.join();
 }
 
-void ThreadTest::InstanceThreadFunction()
+void ThreadTest::operator()()
 {
 	for (int i = 0; i < 5; i++)
 	{
-		std::cout << "thread instance function pointer Executing" << std::endl;
+		std::cout << "thread function object Executing" << std::endl;
 		std::this_thread::sleep_for(std::chrono::milliseconds(200));
 	}
 }
