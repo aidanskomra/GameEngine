@@ -1,15 +1,16 @@
 #include <iostream>
-#include "Robots.h"
+#include "Unit.h"
 
 int main()
 {
-	InheritenceRobot* ir = new InheritenceRobot();
-	std::cout << "Inheritence Robot\n";
-	ir->Grab();
-	ir->Walk();
+	Unit* unit = new Unit();
 
-	CompositionRobot* cr = new CompositionRobot();
-	std::cout << "\nComposition Robot\n";
-	cr->Grab();
-	cr->Walk();
+	float count = 0.0f;
+	while (count < 10) {
+		unit->Update();
+		unit->MoveTo((int)count, 10);
+		std::cout << unit->GetCachedData().str() << "\n";
+		count += 0.333f;
+	};
+	delete unit;
 }
