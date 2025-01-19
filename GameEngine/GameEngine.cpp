@@ -4,6 +4,6 @@
 int main()
 {
 	ThreadTest* ttest = new ThreadTest();
-	ttest->TestFunctionObject();
+	ttest->TestLambdaFunction();
 	delete ttest;
 }
