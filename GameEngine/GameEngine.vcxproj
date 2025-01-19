@@ -143,6 +143,7 @@
     <ClInclude Include="NoCommandDemo.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="Physics.h" />
+    <ClInclude Include="Robots.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="Unit.h" />
