@@ -19,4 +19,4 @@ public:
 	Singleton& operator = (Singleton const&) = delete;
 };
 
-#endif
+#endif //SINGLETON_H
